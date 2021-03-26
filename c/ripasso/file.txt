@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+    FILE *ptr_in, *ptr_out;
+
+    ptr_in = fopen ("in.txt", "r");
+
+    if (ptr_in) {
+        printf("Errore FILE...\n");
+    }
+    else {
+        printf("FILE OK...\n");
+
+    }
+    /* if (ptr_in == NULL) {
+        printf("Errore FILE...\n");
+        return -1;
+    } */
+
+    ptr_out = fopen ("out.txt", "w");
+
+    if (ptr_out) {
+        printf("Errore FILE...\n");
+    }
+    else {
+        printf("FILE OK...\n");
+    }
+    /* if (ptr_out == NULL) {
+        printf("Errore FILE...\n");
+        return -1;
+    } */
+
+    /*
+    fscanf("ptr_in", "%d", &n); --> leggere
+    Fprintf("ptr_out", "..."); --> scrivere
+    */
+
+    fclose (ptr_out);
+    fclose (ptr_in);
+}
